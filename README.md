@@ -52,7 +52,9 @@ Add the following code to your `Example1` class:
    
    + What is the cause of the problems reported by the compiler, if any?
    
-     ** YOUR ANSWER HERE **
+     2 issues:
+     - First, in the line `bankAccountStorage.setItem(account);`, the variable `account` is of type `Object`, but the method `setItem` expects a parameter of type `bank.BankAccount`. Since `Object` is a supertype of `bank.BankAccount`, this causes a type mismatch error.
+     - Second, in the line `account1.deposit(15);`, the variable `account1` is also of type `Object`, which does not have a `deposit` method. This results in a compilation error because the compiler cannot find the method `deposit` in the `Object` class.
 
 Now replace:
 

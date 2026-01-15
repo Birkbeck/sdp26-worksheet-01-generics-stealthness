@@ -20,7 +20,19 @@ public class Example1 {
 
         /* uncompilable code examples
         Storage<BankAccount> anotherBankAccountStorage = Storage<String>; // Error: incompatible types
+
+        Object account = new bank.BankAccount(2025);
+        bankAccountStorage.setItem(account);  // Error: incompatible types account is not of Object type.
+
+        Object account1 = bankAccountStorage.getItem();
+        account1.deposit(15); // Error: cannot find symbol method deposit(int) on Object type
+
+        ((BankAccount) account1).deposit(15); // This works after casting but is not type safe.
         */
+
+        // Correct way to create and use a BankAccount
+        BankAccount bankAccount = new BankAccount(2025);
+        bankAccount.deposit(15);
 
     }
 }
