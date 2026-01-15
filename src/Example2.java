@@ -1,3 +1,5 @@
+import bank.BankAccount;
+
 public class Example2 {
     public static void main(String[] args) {
         BankAccount[] array = new BankAccount[2];

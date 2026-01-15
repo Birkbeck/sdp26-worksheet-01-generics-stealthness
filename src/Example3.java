@@ -1,3 +1,6 @@
+import bank.BankAccount;
+import bank.Storage;
+
 public class Example3 {
     public static void main(String[] args) {
         Storage<BankAccount> storage = new Storage<>();
